@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes title {
+  from {
+    opacity: 0;
+    letter-spacing: -0.5em;
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: normal;
+    filter: blur(0);
+  }
+}
+
+@keyframes float-shadow {
+  0% {
+    text-shadow: 0 15px 40px rgba(59, 130, 246, 0.2),
+                 0 10px 30px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(59, 130, 246, 0.4),
+                 0 15px 35px rgba(59, 130, 246, 0.2);
+  }
+  100% {
+    text-shadow: 0 15px 40px rgba(59, 130, 246, 0.2),
+                 0 10px 30px rgba(59, 130, 246, 0.1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 1s ease-out forwards;
+}
+
+.animate-title {
+  animation: title 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards,
+             float-shadow 3s ease-in-out infinite;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-center mb-16;
+  }
+}
