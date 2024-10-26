@@ -14,13 +14,15 @@ export function AnimatedSection({ children, className = '' }: AnimatedSectionPro
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('show');
-            observer.unobserve(entry.target);
+          }
+          else {
+            entry.target.classList.remove('show');
           }
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px',
+        threshold: 0.3,
+        rootMargin: '3px',
       }
     );
 

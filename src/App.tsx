@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Mail, Github, Linkedin, ChevronDown, Laptop, Server, Palette } from 'lucide-react';
+import { Mail, Github, Linkedin, ChevronDown, Laptop, Server, Palette } from 'lucide-react';
 import { AnimatedSection } from './components/AnimatedSection';
 import { SkillCard } from './components/SkillCard';
 
@@ -11,7 +11,7 @@ function App() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-4 animate-glow">
             <span className="inline-block text-sm md:text-base text-blue-400 font-medium tracking-wider uppercase animate-slide-down">
-              Full Stack Developer
+              Software Engineer
             </span>
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-8 relative">
@@ -105,7 +105,7 @@ function App() {
       </AnimatedSection>
 
       <footer className="py-8 text-center text-gray-400">
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 AngelJSD. All rights reserved.</p>
       </footer>
     </div>
   );
