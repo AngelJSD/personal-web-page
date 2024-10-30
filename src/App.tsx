@@ -2,12 +2,14 @@ import React from 'react';
 import { Mail, Github, Linkedin, ChevronDown, Laptop, Server, Palette } from 'lucide-react';
 import { AnimatedSection } from './components/AnimatedSection';
 import { SkillCard } from './components/SkillCard';
+import { AnimatedBackground } from './components/AnimatedBackground';
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Hero Section */}
       <header className="min-h-screen flex flex-col items-center justify-center relative px-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-gray-900 to-gray-900">
+        <AnimatedBackground />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-4 animate-glow">
             <span className="inline-block text-sm md:text-base text-blue-400 font-medium tracking-wider uppercase animate-slide-down">
@@ -46,12 +48,12 @@ function App() {
             <SkillCard
               Icon={Laptop}
               title="Frontend Development"
-              skills="React, TypeScript, Next.js, Tailwind CSS"
+              skills="React, TypeScript, Tailwind CSS"
             />
             <SkillCard
               Icon={Server}
               title="Backend Development"
-              skills="Node.js, Express, PostgreSQL, REST APIs"
+              skills="AWS, Node.js, hapi.js, PostgreSQL, REST APIs"
             />
             <SkillCard
               Icon={Palette}
