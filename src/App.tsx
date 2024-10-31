@@ -1,8 +1,9 @@
 import React from 'react';
-import { Mail, Github, Linkedin, ChevronDown, Laptop, Server, Palette } from 'lucide-react';
+import { Github, Linkedin, ChevronDown, Laptop, Server, Palette } from 'lucide-react';
 import { AnimatedSection } from './components/AnimatedSection';
 import { SkillCard } from './components/SkillCard';
 import { AnimatedBackground } from './components/AnimatedBackground';
+import ContactForm from './components/ContactForm';
 
 function App() {
   return (
@@ -91,19 +92,7 @@ function App() {
 
       {/* Contact Section */}
       <AnimatedSection className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            <span className="border-b-4 border-blue-400 pb-2">Get in Touch</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Interested in working together? Let's connect!
-          </p>
-          <a href="mailto:your.email@example.com" 
-             className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
-            <Mail size={20} />
-            Contact Me
-          </a>
-        </div>
+        <ContactForm />
       </AnimatedSection>
 
       <footer className="py-8 text-center text-gray-400">
