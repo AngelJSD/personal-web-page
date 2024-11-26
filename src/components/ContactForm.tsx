@@ -13,7 +13,7 @@ const ContactForm: React.FC = () => {
     const data = new FormData(form);
 
     try {
-      const response = await fetch(process.env.REACT_APP_FORMSPREE_URL, {
+      const response = await fetch(process.env.REACT_APP_FORMSPREE_URL || 'https://mockformsubmission.com', {
         method: "POST",
         body: data,
         headers: {
