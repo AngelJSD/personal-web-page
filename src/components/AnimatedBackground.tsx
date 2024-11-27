@@ -38,11 +38,14 @@ export function AnimatedBackground() {
         events: {
           onHover: {
             enable: true,
-            mode: "attract",
+            mode: "repulse",
           },
         },
         modes: {
-          attract: { distance: 200, duration: 0.4, factor: 5 }
+          repulse: {
+            distance: 100,
+            duration: 0.2,
+          },
         },
       },
       particles: {

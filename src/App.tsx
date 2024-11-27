@@ -5,6 +5,8 @@ import { SkillCard } from './components/SkillCard';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import ContactForm from './components/ContactForm';
 import { ExperienceCard } from './components/ExperienceCard';
+import { CertificationCard } from './components/CertificationCard';
+import AWSBadge from './assets/badges/awsBadge.png'
 
 function App() {
   return (
@@ -72,34 +74,54 @@ function App() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             <span className="border-b-4 border-blue-400 pb-2">Experience</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             <ExperienceCard
               jobTitle='Software Engineer'
               start='Feb. 2022'
               end='Present'
-              description='Led development of enterprise web applications, mentored junior developers, and implemented modern CI/CD practices.'
-              skills={['React', 'Node.js', 'TypeScript', 'AWS']}
+              description='Developed and maintained scalable micro-service architectures, following SOLID principles with hapi.js, Postgres, and AWS RDS, while optimizing AWS resources using Terraform and Cost Explorer. Integrated generative AI APIs, AWS SQS, and S3 for efficient back-end functionality, and implemented real-time features using SSE in React front-end applications with performance optimizations like lazy loading. Ensured code quality with Jest and vitest, contributed to reusable UI components, and worked under the FaST agile methodology.'
+              skills={['REST APIs', 'Node.js', 'PostgreSQL', 'Unit Testing', 'IaC', 'AWS', 'AI integration']}
             />
             <ExperienceCard
               jobTitle='Lead Developer'
               start='Feb. 2021'
               end='Feb. 2022'
-              description='Led development of enterprise web applications, mentored junior developers, and implemented modern CI/CD practices.'
-              skills={['React', 'Node.js', 'TypeScript', 'AWS']}
+              description='Led a team of front-end developers and QA testers using the SCRUM methodology. Created, estimated, prioritized and assigned front-end tasks.'
+              skills={['React', 'SCRUM', 'NX.dev', 'UI/UX']}
             />
             <ExperienceCard
               jobTitle='Frontend Developer'
               start='Sep. 2019'
               end='Feb. 2022'
-              description='Led development of enterprise web applications, mentored junior developers, and implemented modern CI/CD practices.'
-              skills={['React', 'Node.js', 'TypeScript', 'AWS']}
+              description='Developed a publishable library of UI components. Orchestrated many front-end projects and a library of UI components on a single monorepository using the framework NX.dev and React. Setup visual regression tests using Cypress to prevent unintended UI changes. Setup automated tasks using bitbucket pipelines that run on every pull request.'
+              skills={['React', 'TypeScript', 'Cypress', 'NX.dev', 'Storybook', 'UI/UX']}
             />
             <ExperienceCard
               jobTitle='Web Development Intern'
               start='Mar. 2019'
               end='Sep. 2019'
-              description='Led development of enterprise web applications, mentored junior developers, and implemented modern CI/CD practices.'
-              skills={['React', 'Node.js', 'TypeScript', 'AWS']}
+              description='Developed the front-end of web applications using React. Brougth to live UI designs focusing on UX and performance on slow networks.'
+              skills={['React', 'TypeScript']}
+            />
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <span className="border-b-4 border-blue-400 pb-2">Certifications</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <CertificationCard
+              badge={<img src={AWSBadge} height={150} width={150} alt="Logo" />}
+              title="AWS Certified Cloud Practitioner"
+              skills="Amazon Web Services (AWS)"
+            />
+            <CertificationCard
+              badge={<img src={AWSBadge}  height={150} width={150} alt="Logo" />}
+              title="Machine Learning and Deep Learning Certificate"
+              skills="Universidad Catolica San Pablo"
             />
           </div>
         </div>
